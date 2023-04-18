@@ -20,6 +20,21 @@ function M.setup()
   vim.api.nvim_create_user_command('ManTabList', function (input)
     vim.cmd("tabs")
   end, {})
+
+  vim.api.nvim_create_user_command('ManBuffList', function (input)
+    vim.cmd("buffers")
+  end, {})
+
+  vim.api.nvim_create_user_command('ManBuffNext', function (input)
+    vim.cmd("bnext")
+  end, {})
+
+  vim.api.nvim_create_user_command('ManBuffPrev', function (input)
+    vim.cmd("bprev")
+  end, {})
+
+   -- TODO: Add commands for jumping to buffer N
 end
 
 return M
+
